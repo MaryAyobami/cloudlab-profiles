@@ -42,8 +42,8 @@ request = pc.makeRequestRSpec()
 
 node_0 = request.RawPC('node-0')
 node_0.hardware_type = params.nodeType
-node_0.disk_image = 'urn:publicid:IDN+wisc.cloudlab.us+image+redshift-PG0:ksplit-eval-test-nd'
-
+# node_0.disk_image = 'urn:publicid:IDN+wisc.cloudlab.us+image+redshift-PG0:ksplit-eval-test-nd'
+node_0.disk_image = 'urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU18-64-STD'
 # Install and execute a script that is contained in the repository.
 node_0.addService(pg.Execute(shell="sh", command="/local/repository/ksplit-top.sh"))
 
